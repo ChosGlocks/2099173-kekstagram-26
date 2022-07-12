@@ -51,7 +51,7 @@ imgUploadFormElement.addEventListener('submit', (evt) => {
 
   function validateHashtag() {
     const booleanValues = [];
-    const re = /^#[A-Za-zА-Яа-яЁё0-9]{1,19}$/;
+    const re = /^#[A-Za-zА-Яа-яЁё0-9]{1,19}$||^\0/;
     for (let i=0; i<hashtags.length; i++) {
       booleanValues.push(re.test(hashtags[i]));
     }
