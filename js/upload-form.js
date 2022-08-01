@@ -6,11 +6,12 @@ import {textHashtagsFormElement} from './form-validation.js';
 const formDivElement = document.querySelector('.img-upload__overlay');
 const uploadCancelButtonElement = document.querySelector('.img-upload__cancel');
 const imgUploadInputElement = document.querySelector('#upload-file');
-const onUploadFormEscKeydown = function (evt) {
+
+function onUploadFormEscKeydown (evt) {
   if (isKeydownEscape(evt)) {
     closeUploadForm();
   }
-};
+}
 
 function openUploadForm () {
   bodyElement.classList.add('modal-open');
@@ -25,6 +26,7 @@ function closeUploadForm () {
   document.removeEventListener('keydown', onUploadFormEscKeydown);
   imgUploadInputElement.value = '';
   textDescriptionFormElement.value = '';
+  window.location.reload();
 }
 
 imgUploadInputElement.addEventListener('change', openUploadForm);
@@ -45,4 +47,4 @@ textHashtagsFormElement.onblur = function () {
   document.addEventListener('keydown', onUploadFormEscKeydown);
 };
 
-export {openUploadForm, closeUploadForm};
+export {openUploadForm, closeUploadForm };

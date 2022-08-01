@@ -4,6 +4,7 @@ import { showThumbnails } from './thumbnails.js';
 import { closeUploadForm } from './upload-form.js';
 import { showAlert } from './util.js';
 
+
 fetch('https://26.javascript.pages.academy/kekstagram/data')
   .then((response) => response.json())
   .then((objectsFromServer) => {
@@ -20,4 +21,5 @@ fetch('https://26.javascript.pages.academy/kekstagram/data')
   });
 
 setUserFormSubmit(closeUploadForm);
+
 

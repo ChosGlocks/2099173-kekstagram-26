@@ -21,3 +21,5 @@ import './thumbnails.js';
 
 //Взаимодействие с сервером
 import './server-interaction.js';
+
+
